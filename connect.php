@@ -17,10 +17,10 @@ $msg = $_POST['msg'];
 
 
 if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) || !empty($email) || !empty($gender) || !empty($Languages) || !empty($msg))
-{ $host = "127.0.0.1";
-  $dbusername = "azure";
-  $dbpassword = "6#vWHD_$";
-  $dbname = "localdb";
+{ $host = "healthmatchmysql-102.mysql.database.azure.com";
+  $dbusername = "HEALTHMATCH@healthmatchmysql-102";
+  $dbpassword = "Hackathon2020";
+  $dbname = "volunteer";
   $conn = new mysqli($host,$dbusername,$dbpassword,$dbname);
   if (mysqli_connect_error())
   {

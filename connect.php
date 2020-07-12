@@ -17,7 +17,7 @@ $msg = $_POST['msg'];
 
 
 if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) || !empty($email) || !empty($gender) || !empty($Languages) || !empty($msg))
-{ $host = "localhost";
+{ $host = "13.68.191.181";
   $dbusername = "root";
   $dbpassword = "root";
   $dbname = "volunteer";

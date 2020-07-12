@@ -18,7 +18,7 @@ $msg = $_POST['msg'];
 
 if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) || !empty($email) || !empty($gender) || !empty($Languages) || !empty($msg))
 { $host = "healthmatchmysql-102.mysql.database.azure.com";
-  $dbusername = "HEALTHMATCH@healthmatchmysql-102";
+  $dbusername = "HEALTHMATCH";
   $dbpassword = "Hackathon2020";
   $dbname = "volunteer";
   $conn = new mysqli($host,$dbusername,$dbpassword,$dbname);

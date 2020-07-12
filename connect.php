@@ -19,7 +19,7 @@ $msg = $_POST['msg'];
 if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) || !empty($email) || !empty($gender) || !empty($Languages) || !empty($msg))
 { $host = "13.68.191.181";
   $dbusername = "root";
-  $dbpassword = "root";
+  $dbpassword = "UXXk1r5rppTc";
   $dbname = "volunteer";
   $conn = new mysqli($host,$dbusername,$dbpassword,$dbname);
   if (mysqli_connect_error())

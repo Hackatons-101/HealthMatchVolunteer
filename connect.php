@@ -17,10 +17,10 @@ $msg = $_POST['msg'];
 
 
 if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) || !empty($email) || !empty($gender) || !empty($Languages) || !empty($msg))
-{ $host = "13.68.191.181";
-  $dbusername = "root";
-  $dbpassword = "UXXk1r5rppTc";
-  $dbname = "volunteer";
+{ $host = "127.0.0.1";
+  $dbusername = "azure";
+  $dbpassword = "6#vWHD_$";
+  $dbname = "localdb";
   $conn = new mysqli($host,$dbusername,$dbpassword,$dbname);
   if (mysqli_connect_error())
   {

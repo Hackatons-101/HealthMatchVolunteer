@@ -1,21 +1,24 @@
 
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="signupvolunteer.css" />
-   <script
+    <script
       type="text/javascript"
       src="https://cdn.weglot.com/weglot.min.js"
-    ></script>
-   
-      <script>
+	></script>
+
+	 <script>
         Weglot.initialize({
           api_key: "wg_6595b397394b082513ae5269c8992a3d7",
         });
       </script>
+    <style>
 
-<style>
+
+@import url("https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur");
 
 * {
   padding: 0;
@@ -36,6 +39,11 @@ body {
   /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
 }
 
+ table {
+        border-collapse: separate;
+        border-spacing: 20px 0;
+      }
+
 form {
   width: 80%;
   min-height: 50%;
@@ -44,12 +52,7 @@ form {
   margin: 2% auto;
   box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
   padding: 2%;
-  background-image: linear-gradient(-240deg, #e3fdf5 50%, #ffe6fa 50%);
-}
-
-.msg{
-	width: 100%;
-	height:7rem;
+  background-image: linear-gradient(-225deg, #e3fdf5 50%, #ffe6fa 50%);
 }
 
 @media (min-width: 600px) {
@@ -61,7 +64,7 @@ form {
     margin: 2% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
-    background-image: linear-gradient(-234deg, #e3fdf5 50%, #ffe6fa 50%);
+    background-image: linear-gradient(-225deg, #e3fdf5 50%, #ffe6fa 50%);
   }
 }
 /* form Container */
@@ -164,6 +167,12 @@ input[type="text"] {
   border-radius: 5px 5px 5px 5px;
   transition: 0.2s linear;
 }
+ td {
+    padding-left: 0.5rem;
+        text-align: center;
+
+
+      }
 
 input[type="email"] {
   width: 90%;
@@ -182,17 +191,7 @@ input[type="email"] {
   border-radius: 5px 5px 5px 5px;
   transition: 0.2s linear;
 }
-.languages {
-  text-align: justify;
-  padding-left: 7em;
-}
 
-@media (min-width: 600px) {
-  .languages {
-    text-align: justify;
-    padding-left: 13em;
-  }
-}
 
 input[type="tel"] {
   width: 60%;
@@ -211,6 +210,8 @@ input[type="tel"] {
   border-radius: 5px 5px 5px 5px;
   transition: 0.2s linear;
 }
+
+
 
 
 
@@ -253,7 +254,7 @@ select {
         style="padding-left: 2rem;"
       /></div>
 
-  <form action="connect.php" method="POST">
+  <form action="connect.php" method="post">
 
         <div class="con">
 
@@ -489,87 +490,54 @@ select {
         <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
         <input type="email" id="email" name="email" placeholder="Email" required>
 <br>
-
+         
           <input type="text" id="gender" name="gender" placeholder="Gender">
 		<br>
 
 
 
-	<h5>Languages you know:</h5>
- <select id="lstFruits" multiple="multiple" name="Languages" style="background-color: rgba(0, 0, 0, 0.644);">
-    <option value="E">English</option>
-    <option value="S">Spanish</option>
-    <option value="M">Mandarin</option>
-    <option value="H">Hindi</option>
 
- </select>
-<h5>Personal message to our providers:</h5>
+<h4>Languages you know:</h4>
+
+<div class="lang">
+
+<table >
+   <tr>
+
+   </tr>
+   <tr>
+      <td>English</td>
+      <th><input type="checkbox" name="Languages[]" value="E"></th>
+
+      <td>Hindi</td>
+      <th><input type="checkbox" name="Languages[]" value="H"></th>
+
+      <td>Mandarin</td>
+      <th><input type="checkbox" name="Languages[]" value="M"></th>
+
+      <td>Spanish</td>
+      <th><input type="checkbox" name="Languages[]" value="S"></th>
+   </tr>
+   <tr>
+
+   </tr>
+</table>
+
+</div>
+	<h4>Personal message to our providers:</h4>
   <input class="msg" type="text" id="msg" name="msg"style="width:90% " placeholder="Let frontliners know you appreciate them!" required>
 
-       <div style="text-align: center;">
-<input type="submit" class=" submits sign-up":hover>
 
-	  </button></div>
 
+       <div style="text-align: center;"> <button class=" submits sign-up":hover name="sub"  >Sign Up
+
+
+      </button></div>
 
 
       </form>
 
     </div>
   </body>
-
-
-  <script>
-    function show() {
-      var p = document.getElementById("pwd");
-      p.setAttribute("type", "text");
-    }
-
-    function hide() {
-      var p = document.getElementById("pwd");
-      p.setAttribute("type", "password");
-    }
-
-    var pwShown = 0;
-
-    document.getElementById("eye").addEventListener(
-      "click",
-      function () {
-        if (pwShown == 0) {
-          pwShown = 1;
-          show();
-        } else {
-          pwShown = 0;
-          hide();
-        }
-      },
-      false
-    );
-  </script>
-
-
-
-
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css"
-    rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css"
-    rel="stylesheet" type="text/css" />
-<script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"
-    type="text/javascript"></script>
-<script type="text/javascript">
-    $(function () {
-        $('#lstFruits').multiselect({
-            includeSelectAllOption: true
-        });
-    });
-</script>
-
-
-
-
-
 
 </html>

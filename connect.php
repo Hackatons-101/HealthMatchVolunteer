@@ -17,8 +17,8 @@ $msg = $_POST['msg'];
 
 
 if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) || !empty($email) || !empty($gender) || !empty($Languages) || !empty($msg))
-{ $host = 'healthmatchmysql-102.mysql.database.azure.com';
-  $username = 'HEALTHMATCH@healthmatchmysql-102';
+{ $host = 'healthmatch-server.mysql.database.azure.com';
+  $username = 'HEALTHMATCH@healthmatch-server';
   $password = 'Hackathon2020';
   $db_name = 'volunteer';
   

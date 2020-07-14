@@ -44,7 +44,7 @@ ul {
   margin: 0;
 
   overflow: hidden;
-  background-color: #8c99d6;
+  background-color: #cacfe4;
   color: white;
 }
 
@@ -56,21 +56,21 @@ ul {
       }
 
 form {
-  width: 80%;
+  width: 90%;
   min-height: 50%;
   height: auto;
   border-radius: 5px;
   margin: 2% auto;
   box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
-  padding: 2%;
-  background-image: linear-gradient(-240deg, #e3fdf5 50%, #ffe6fa 50%);
+  padding: 1%;
+  background-image: linear-gradient(-237deg, #e3fdf5 50%, #ffe6fa 50%);
 }
 
 @media (min-width: 600px) {
 
 	 table {
         border-collapse: separate;
-        border-spacing: 40px 0;
+        border-spacing: 50% 0;
 		text-align: center;
       }
   form {
@@ -80,8 +80,8 @@ form {
     border-radius: 5px;
     margin: 2% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
-    padding: 2%;
-    background-image: linear-gradient(-232deg, #e3fdf5 50%, #ffe6fa 50%);
+    padding: 1%;
+    background-image: linear-gradient(-230deg, #e3fdf5 50%, #ffe6fa 50%);
   }
 }
 /* form Container */
@@ -184,6 +184,30 @@ input[type="text"] {
   border-radius: 5px 5px 5px 5px;
   transition: 0.2s linear;
 }
+
+
+
+@media(max-width:800px){
+
+
+	input[type="text"] {
+  width: 90%;
+  height: 50px;
+
+  margin-top: 2%;
+  padding: 15px;
+
+  font-size: 16px;
+  font-family: "Abel", sans-serif;
+  color: white;
+
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.644);
+  border-radius: 5px 5px 5px 5px;
+  transition: 0.2s linear;
+}
+}
  td {
     padding-left: 3rem;
         text-align: center;
@@ -228,6 +252,16 @@ input[type="tel"] {
   transition: 0.2s linear;
 }
 
+.grid{
+	display: grid;
+
+padding-left: 2rem;
+padding-right: 2rem;
+column-gap: 0.25rem;
+grid-template-columns: 1fr 1fr 1fr ;
+grid-template-rows: 1fr 1fr;
+}
+
 
 
 
@@ -254,12 +288,20 @@ select {
         width: 40%;
         text-align: center;
       }
-      @media(min-width: 600px)
+      @media(min-width: 800px)
       {
           .volunteerlogo {
         width: 20%;
         text-align: center;
       }
+
+	  .grid{
+	display: grid;
+	padding: 2rem;
+grid-template-columns: 1fr 1fr  1fr 1fr;
+grid-template-rows: 1fr;
+}
+
       }
     </style>
   </head>
@@ -513,33 +555,26 @@ select {
 		<br>
 
 
-
+<br>
 
 <h4>Languages you know:</h4>
 
-<div class="lang">
-
-<table >
-   <tr>
-
-   </tr>
-   <tr>
+<div class="grid" style="text-align: center;">
+<div>
       <td>English</td>
       <th><input type="checkbox" name="Languages[]" value="E"></th>
-
+</div>
+<div>
       <td>Hindi</td>
       <th><input type="checkbox" name="Languages[]" value="H"></th>
-<tr>
-	      <td>Mandarin</td>
-      <th><input type="checkbox" name="Languages[]" value="M"></th>
 
+</div><div>	      <td>Mandarin</td>
+      <th><input type="checkbox" name="Languages[]" value="M"></th>
+</div>
+<div style="text-align: center;">
       <td>Spanish</td>
       <th><input type="checkbox" name="Languages[]" value="S"></th>
-   </tr>
-   <tr>
-
-   </tr>
-</table>
+ </div> 
 
 </div>
 	<h4>Personal message to our providers:</h4>

@@ -20,7 +20,7 @@ if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) |
 { $host = 'healthmatch-server.mysql.database.azure.com';
   $username = 'HEALTHMATCH@healthmatch-server';
   $password = 'Hackathon2020';
-  $db_name = 'volunteer';
+  $db_name = 'schedule';
   
   //Establishes the connection
   $conn = mysqli_init();

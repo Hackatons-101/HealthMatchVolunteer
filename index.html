@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -312,10 +310,10 @@ grid-template-rows: 1fr;
     <div style="text-align: center;">  <img
         src="logo.png"
         class="volunteerlogo"
-        style="padding-left: 2rem margin-top:1rem;"
+        style="padding-left: 2rem;"
       /></div>
 
-  <form action="connect.php" method="post">
+  <form action="connect.php" method="post" id="test-form">
 
         <div class="con">
 
@@ -593,5 +591,22 @@ grid-template-rows: 1fr;
 
     </div>
   </body>
+<script>
 
+  var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbxE-wk_qeOxj9pgblNfgsTBADtAcm0-OLQvif20NPqdCWD3YIk/exec'
+
+$('#sub').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
+  
+</script>
 </html>

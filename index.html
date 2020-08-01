@@ -313,7 +313,7 @@ grid-template-rows: 1fr;
         style="padding-left: 2rem;"
       /></div>
 
-  <form action="connect.php" method="post" name="google-sheet">
+  <form  method="post" name="google-sheet">
 
         <div class="con">
 
@@ -593,18 +593,20 @@ grid-template-rows: 1fr;
   </body>
 
 
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbx0A2pNEXhRmsKfUGUnD1sFf18MEmL6c5uFByWBHKplDCJx43nd/exec";
-      const form = document.forms["google-sheet"];
+  <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxurG3nEP-xg0e1zKVPa4Y0Fpr-oeAzkhHCgpsB1jCL5PPbFkQ/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thank you for signing up as a Volunteer!"))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-           window.open("connect.php");
-      });
-	 
-    </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

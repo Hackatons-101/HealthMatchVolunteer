@@ -601,9 +601,9 @@ grid-template-rows: 1fr;
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          
+           window.open("connect.php");
       });
-	  window.open("connect.php");
+	 
     </script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

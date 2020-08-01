@@ -313,7 +313,7 @@ grid-template-rows: 1fr;
         style="padding-left: 2rem;"
       /></div>
 
-  <form method="post" autocomplete="off" name="google-sheet">
+  <form action="connect.php" method="post" name="google-sheet">
 
         <div class="con">
 
@@ -581,7 +581,7 @@ grid-template-rows: 1fr;
 
 
 
-       <div style="text-align: center;"> <button class=" submits sign-up":hover name="submit" id="submit-form" >Sign Up
+       <div style="text-align: center;"> <button class=" submits sign-up":hover name="submit"  >Sign Up
 
 
       </button></div>
@@ -593,23 +593,22 @@ grid-template-rows: 1fr;
   </body>
 
 
- 
     <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxE-wk_qeOxj9pgblNfgsTBADtAcm0-OLQvif20NPqdCWD3YIk/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzNDy5ZZ6uczh_MX0dCxlSvX34pYj76gltAsiNGXPSQMcVmts-w/exec";
+      const form = document.forms["google-sheet"];
 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-         
-    
-  
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) =>
+            alert("Thanks for Contacting us..! We Will Contact You Soon...")
+          )
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
 </html>

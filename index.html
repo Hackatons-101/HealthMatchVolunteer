@@ -581,7 +581,7 @@ grid-template-rows: 1fr;
 
 
 
-       <div style="text-align: center;"> <button class=" submits sign-up":hover name="sub"  >Sign Up
+       <div style="text-align: center;"> <button class=" submits sign-up":hover name="sub" id="submit-form" >Sign Up
 
 
       </button></div>
@@ -596,7 +596,7 @@ grid-template-rows: 1fr;
   var $form = $('form#test-form'),
     url = 'https://script.google.com/macros/s/AKfycbxE-wk_qeOxj9pgblNfgsTBADtAcm0-OLQvif20NPqdCWD3YIk/exec'
 
-$('#sub').on('click', function(e) {
+$('#submit-form').on('click', function(e) {
   e.preventDefault();
   var jqxhr = $.ajax({
     url: url,

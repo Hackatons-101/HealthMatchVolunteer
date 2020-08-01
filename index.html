@@ -595,14 +595,7 @@ grid-template-rows: 1fr;
 
   <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbxurG3nEP-xg0e1zKVPa4Y0Fpr-oeAzkhHCgpsB1jCL5PPbFkQ/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thank you for signing up as a Volunteer!"))
-                .catch(error => console.error('Error!', error.message))
-            })
+            const form = document.forms['google-sheet']})
           </script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

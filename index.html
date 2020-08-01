@@ -312,9 +312,7 @@ grid-template-rows: 1fr;
         class="volunteerlogo"
         style="padding-left: 2rem;"
       /></div>
-
-  <form action="connect.php" method="post" name="google-sheet">
-	  <script>
+	    	  <script>
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbzNDy5ZZ6uczh_MX0dCxlSvX34pYj76gltAsiNGXPSQMcVmts-w/exec";
       const form = document.forms["google-sheet"];
@@ -324,6 +322,9 @@ grid-template-rows: 1fr;
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
         });
     </script>
+
+  <form action="connect.php" method="post" name="google-sheet">
+
 
         <div class="con">
 

@@ -314,6 +314,16 @@ grid-template-rows: 1fr;
       /></div>
 
   <form action="connect.php" method="post" name="google-sheet">
+	  <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzNDy5ZZ6uczh_MX0dCxlSvX34pYj76gltAsiNGXPSQMcVmts-w/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        });
+    </script>
 
         <div class="con">
 
@@ -592,17 +602,6 @@ grid-template-rows: 1fr;
     </div>
   </body>
 
-
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbzNDy5ZZ6uczh_MX0dCxlSvX34pYj76gltAsiNGXPSQMcVmts-w/exec";
-      const form = document.forms["google-sheet"];
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-        });
-    </script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

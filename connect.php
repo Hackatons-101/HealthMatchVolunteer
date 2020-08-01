@@ -28,6 +28,7 @@ if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) |
   if (mysqli_connect_errno($conn)) {
   die('Failed to connect to MySQL: '.mysqli_connect_error());
   }
+    }
   else {
     $SELECT = "SELECT email From resister Where email =? Limit 1 ";
     $INSERT = "INSERT Into resister (fname,lname,countryCode,phone,email,gender,Languages,msg) values(?, ?, ?, ?, ?, ?, ?, ?)";

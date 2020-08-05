@@ -313,7 +313,7 @@ grid-template-rows: 1fr;
         style="padding-left: 2rem;"
       /></div>
 
-  <form  method="post" name="google-sheet">
+  <form  method="post" name="google-sheet" id="HideBlock">
 
         <div class="con">
 
@@ -581,9 +581,7 @@ grid-template-rows: 1fr;
 
 
 
-       <div style="text-align: center;">
-
- <button class=" submits sign-up":hover name="submit"  >Sign Up
+       <div style="text-align: center;"> <button class=" submits sign-up":hover name="submit" id="showHiddenBlock" >Sign Up
 
 
       </button></div>
@@ -593,8 +591,9 @@ grid-template-rows: 1fr;
 
     </div>
   </body>
-
-
+  <div style="text-align: center;">
+<h1 id="initiallyHiddenBlock">Submitted!</h1>
+</div>
   <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbxurG3nEP-xg0e1zKVPa4Y0Fpr-oeAzkhHCgpsB1jCL5PPbFkQ/exec'
             const form = document.forms['google-sheet']
@@ -602,10 +601,27 @@ grid-template-rows: 1fr;
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response =>window.open("https://hook.integromat.com/qpkg4dx9jolm869hqimacl32rmjz9wez");)
+                .then(response => alert("Thank you for signing up as a Volunteer!"))
                 .catch(error => console.error('Error!', error.message))
             })
-          </script>
+		  </script>
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"
+      ></script>
+
+
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+     <script>
+     $(document).ready(function() {
+      $('#showHiddenBlock').click(function() {
+          $('#initiallyHiddenBlock').show();
+		  $('#HideBlock').hide();
+      });
+  });
+  </script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

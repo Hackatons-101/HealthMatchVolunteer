@@ -64,6 +64,153 @@ select {
       }
      
       }
+	     .viewbtn{
+        display: block;
+        width: 100px;
+        height: 35px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to right, #45a29e, #5bcadd, #3292be);
+        background-size: 200%;
+        font-size: 1.2rem;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        margin: 1rem 0;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .viewbtn:hover {
+        background-position: right;
+      }
+
+      .acceptbtn{
+        display: block;
+        width: 150px;
+        height: 35px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+       background-image: linear-gradient(to right, #745ed8, #bcb2df);
+        background-size: 200%;
+        font-size: 1.2rem;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        margin-top: 1rem;
+        margin-left: 32%;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .acceptbtn:hover {
+        background-position: right;
+        color:black;
+      }
+
+
+      i{
+        margin-right:0.3rem;
+      }
+
+      form{
+ margin-top:2rem;
+      }
+
+      @media(min-width:900px)
+      {
+     form{
+
+       margin-left:25%;
+       margin-top:5%;
+     }
+
+     .acceptbtn{
+       display: block;
+       width: 150px;
+       height: 35px;
+       border-radius: 25px;
+       outline: none;
+       border: none;
+      background-image: linear-gradient(to right, #5ac5e6, #bcb2df);
+       background-size: 200%;
+       font-size: 1.2rem;
+       color: #fff;
+       font-family: "Poppins", sans-serif;
+       text-transform: uppercase;
+       margin-top: 1rem;
+       margin-left: 39%;
+       cursor: pointer;
+       transition: 0.5s;
+     }
+
+      }
+
+       #initiallyHiddenBlock {
+          display: none;
+      }
+      .homebtn {
+        border: 1px solid white;
+        background-color: rgb(105, 223, 197);
+        margin: 0.5rem;
+        width: 90%;
+        height: 5rem;
+        font-size: 20px;
+        font-family: "montserrat";
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        color: black;
+        margin-left:1rem;
+      }
+
+      @media (min-width: 600px) {
+        .homebtn {
+          border: 1px solid white;
+          border-radius: 5px;
+          margin: 1rem;
+          width: 80%;
+          height: 5rem;
+          font-size: 20px;
+          font-family: "montserrat";
+          font-weight: 600;
+          cursor: pointer;
+          color: black;
+          background-color: rgb(105, 223, 197);
+          transition: 0.8s;
+          position: relative;
+          overflow: hidden;
+        }
+      }
+
+      .homebtn:hover {
+        color: white;
+        background: #51a09b;
+      }
+
+
+ .margin{
+       margin-top: 15%;
+      }
+      @media(min-width:900px)
+     {
+
+       .buttongrid{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin-left: 17%;
+
+      }
+      .margin{
+       margin-top: 17%;
+      }
+      }
+
     </style>
   </head>
   <body>
@@ -150,7 +297,7 @@ if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) |
     
 
 <div style="text-align:center">
-<div style="text-align: center;"> <button class ="acceptbtn":hover name="submit"  id="showHiddenBlock" >Proceed
+<div style="text-align: center;"> <button class ="acceptbtn":hover name="submit"  id="showHiddenBlock" >CONFIRM
 
 
       </button></div>
